@@ -1,0 +1,16 @@
+[Unit]
+Description=Auto Video Compression Service
+After=network.target
+
+[Service]
+ExecStart=/bin/bash /path/to/autovideocompressor.sh
+Restart=always
+RestartSec=10
+User=<put username here>
+WorkingDirectory=/path/to/working/directory
+StandardOutput=append:/path/to/log_file.log
+StandardError=append:/path/to/log_file.log
+LimitNOFILE=65536
+
+[Install]
+WantedBy=multi-user.target
