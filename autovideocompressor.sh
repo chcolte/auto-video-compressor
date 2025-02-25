@@ -4,7 +4,7 @@
 WATCH_DIR="/path/to/watch"
 OUTPUT_DIR="/path/to/output"
 PROCESSED_DIR="/path/to/processed"
-FFMPEG_OPTIONS="-c:v libx265 -preset medium -crf 23 -c:a aac -b:a 128k"
+FFMPEG_OPTIONS="-c:a copy -c:v libx265 -crf 22 -tag:v hvc1"
 SLEEP_INTERVAL=60
 LOG_FILE="/path/to/log_file.log"
 
